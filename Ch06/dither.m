@@ -83,7 +83,8 @@ sound(quantBits(ditherTone2,1,1),Fs);
 
 # note that this generates a TPDF distribution, but does NOT
 # improve upon RPDF - the key with TPDF dither is differencing
-# the dither with itself
+# the dither with itself, causing a shift in the frequency characteristics
+# of the dither noise from LF to HF
 #r1 = rand(length(tone2),1).*2 - 1;
 #r2 = rand(length(tone2),1).*2 - 1;
 #rtpdf = (r1 + r2) ./ 2;
