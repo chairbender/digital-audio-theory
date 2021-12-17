@@ -1,10 +1,15 @@
-function y = myconf(x,h)
+function y = myconv(x,h)
+
+# NOTE - this was taken basically directly from the book
+# example 8_3_3, as instructed, but it runs SO slowly that I can't help
+# but think there is a mistake in the book or it just
+# only runs well on Matlab.
   
 len = length(x)+length(h)-1;
 y=zeros(len,1);
 
 % for every possible shift amount
-for n=0:len-1 
+for n=0:len-1
     % for every k from 0 to n; except before complete overlap 
     % when we can stop at the length of h (the length of the filter)
     for k=0:min(length(h)-1,n)
