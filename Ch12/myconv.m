@@ -2,8 +2,10 @@ function y = myconv(x,h)
 
 # NOTE - this was taken basically directly from the book
 # example 8_3_3, as instructed, but it runs SO slowly that I can't help
-# but think there is a mistake in the book or it just
-# only runs well on Matlab.
+# but think it only runs well in Octave. This post and comment
+# seem to indicate that Octave can do poorly in non-vectorized loops
+# https://stackoverflow.com/a/12571347 and I don't feel like converting
+# this to vectorized version
   
 len = length(x)+length(h)-1;
 y=zeros(len,1);
